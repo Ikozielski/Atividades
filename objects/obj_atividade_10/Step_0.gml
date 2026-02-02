@@ -37,11 +37,13 @@ else if (x > room_width - 32 or x < 32)
 	if (vel_x > 0)
 	{
 		// vai receber o valor dele mesmo +1
+		// ganhar velocidade
 		vel_x += 1;
 	}
 	else
 	{
 		//se nao vai receber o valor dele -1
+		// ganhar velocidade
 		vel_x -= 1;
 	}
 }
@@ -59,13 +61,20 @@ else if (vel_x < -20)
 	vel_x = -20;
 }
 
-
+// se velY for maior que 20
 if (vel_y > 20)
 {
+	// vely volta a ser 20 
 	vel_y = 20;
 }
+
+//se nao se vely for menor que -20
 else if (vel_y < -20)
 {
+	//vel y volta a ser -20 
 	vel_y = -20;
 }
-}
+
+
+// resumindo o quadrado vai andar na diagonal, e quando o valor for suficiente pra ele "bater nos cantos"
+// ele vai inverter a direção e ganhar valocidade
